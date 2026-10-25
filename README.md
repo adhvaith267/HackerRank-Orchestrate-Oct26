@@ -230,7 +230,21 @@ The final 518-case run used provider `ollama-local`, model `qwen2.5:7b`, mode `a
 
 Inference is local-only. No remote model API, API key, credential, or secret is required. Logs are operational and redact PII; evidence text is not logged. Caches are local and ignored. The final manifest records input hashes, source revision, redacted configuration, output hash, counts, and report paths. The policy/status/step layers remain deterministic; extraction enrichment in `auto` depends on the exact local model and measured fallback behavior.
 
-Known limitations: the public sample is a development reference rather than hidden truth; OCR/model-enabled modes depend on local system packages and model availability; the coverage report records 11 no-matching-facts gaps for unrelated/decoy evidence, while all 94 files are present and PDF extraction succeeds; no-grounded-resource gaps remain conservative `INCOMPLETE` without invented steps; activity claims are used for sync-after-delete detection but are not standalone state proof; hidden-test results cannot be measured here. The standalone `output.csv` remains required even though a copy is included in the optional archive.
+## Limitations and Improvements
+
+The 32-case sample evaluation currently matches the reference status on 22 cases (68.8%) and matches the complete ordered step sequence on 3 cases (9.4%). The sample run with `--llm-mode auto` made zero model calls, so these results reflect the deterministic pipeline. Output row ordering and schema validation pass, but semantic accuracy is not yet reliable: some deletion requests are classified as `NOT_APPLICABLE`, some cases are returned as `INCOMPLETE` with no steps, and other cases omit expected verification steps or include unrelated resources. The public sample is a development reference rather than hidden truth, and full hidden-test accuracy is unknown.
+
+Current limitations also include dependence on supplied evidence, 11 no-matching-facts coverage gaps among 94 present evidence files, and local OCR/PDF tooling or model availability. Activity records can indicate synchronization or recreation but do not independently prove a resource's final state. No full-dataset gold output is available for semantic scoring.
+
+Improvements to prioritize:
+
+- Strengthen request authorization and intent classification, including indirect and multilingual deletion requests; add regressions for cases incorrectly marked `NOT_APPLICABLE`.
+- Tighten identity and evidence-to-resource matching so unrelated records are excluded and all relevant records are found.
+- Complete the step planner so supported cases include required account-absence and retained-record verification; prevent `INCOMPLETE` results with empty plans when the output contract requires findings and next steps.
+- Add per-case differential diagnostics for missing, extra, misclassified, and incorrectly ordered steps, then use the 32 sample cases as regression fixtures.
+- Re-run the sample harness under the same configuration as the submitted output and report model calls, fallback behavior, status accuracy, and exact ordered-step accuracy separately.
+
+These results are not production compliance validation. The standalone `output.csv` remains required even though a copy is included in the optional archive.
 
 
 ## License
