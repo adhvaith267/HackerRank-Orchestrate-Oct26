@@ -11,8 +11,8 @@
 </div>
 
 > **Attribution:** the problem statement and dataset were provided by HackerRank as
-> part of the September 2026 Orchestrate challenge. The implementation,
-> architecture, audit engine, evidence readers, evaluation harness, and
+> part of the October 2026 Orchestrate challenge. The implementation,
+> architecture, audit engine, evaluation harness, and
 > supporting components in this repository were developed by me as my challenge submission.
 
 ## Overview
