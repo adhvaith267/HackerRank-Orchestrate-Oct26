@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "contradictory evidence does not claim complete": true,
+    "post-audit evidence is excluded by core": true,
+    "active re-import is incomplete": true,
+    "restore risk is incomplete": true,
+    "missing evidence coverage is incomplete": true,
+    "duplicate case IDs are detected": true,
+    "malformed CSV is detected": true,
+    "source-id forgery is rejected": true,
+    "prompt injection-looking evidence is data": true,
+    "PII in logs is redacted deterministically": true,
+    "PII fields require grounded evidence": true,
+    "malformed JSON fallback is deterministic": true,
+    "unknown fields are rejected": true
+  },
+  "total": 13,
+  "passed": 13
+}

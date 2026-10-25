@@ -1,0 +1,668 @@
+{
+  "manifest_entries": 94,
+  "facts_extracted": 1801,
+  "warnings": 0,
+  "gaps": 11,
+  "missing_files": [],
+  "entries": [
+    {
+      "file_id": "evidence_01",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 8
+    },
+    {
+      "file_id": "evidence_02",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 35
+    },
+    {
+      "file_id": "evidence_03",
+      "format": "txt",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 39
+    },
+    {
+      "file_id": "evidence_04",
+      "format": "image",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_05",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 55
+    },
+    {
+      "file_id": "evidence_06",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_no_matching_facts",
+      "fact_count": 0
+    },
+    {
+      "file_id": "evidence_07",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 25
+    },
+    {
+      "file_id": "evidence_08",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 35
+    },
+    {
+      "file_id": "evidence_09",
+      "format": "image",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 2
+    },
+    {
+      "file_id": "evidence_10",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 47
+    },
+    {
+      "file_id": "evidence_11",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 6
+    },
+    {
+      "file_id": "evidence_12",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 27
+    },
+    {
+      "file_id": "evidence_13",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 39
+    },
+    {
+      "file_id": "evidence_14",
+      "format": "image",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 2
+    },
+    {
+      "file_id": "evidence_15",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 45
+    },
+    {
+      "file_id": "evidence_16",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_no_matching_facts",
+      "fact_count": 0
+    },
+    {
+      "file_id": "evidence_17",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 34
+    },
+    {
+      "file_id": "evidence_18",
+      "format": "pdf",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_19",
+      "format": "image",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_20",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 59
+    },
+    {
+      "file_id": "evidence_21",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_no_matching_facts",
+      "fact_count": 0
+    },
+    {
+      "file_id": "evidence_22",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 65
+    },
+    {
+      "file_id": "evidence_23",
+      "format": "image",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_24",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 44
+    },
+    {
+      "file_id": "evidence_25",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_no_matching_facts",
+      "fact_count": 0
+    },
+    {
+      "file_id": "evidence_26",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 29
+    },
+    {
+      "file_id": "evidence_27",
+      "format": "pdf",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_28",
+      "format": "image",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_29",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 76
+    },
+    {
+      "file_id": "evidence_30",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 9
+    },
+    {
+      "file_id": "evidence_31",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 67
+    },
+    {
+      "file_id": "evidence_32",
+      "format": "image",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_33",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 83
+    },
+    {
+      "file_id": "evidence_34",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_no_matching_facts",
+      "fact_count": 0
+    },
+    {
+      "file_id": "evidence_35",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 24
+    },
+    {
+      "file_id": "evidence_36",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 42
+    },
+    {
+      "file_id": "evidence_37",
+      "format": "image",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_38",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 70
+    },
+    {
+      "file_id": "evidence_39",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 11
+    },
+    {
+      "file_id": "evidence_40",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 27
+    },
+    {
+      "file_id": "evidence_41",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 39
+    },
+    {
+      "file_id": "evidence_42",
+      "format": "image",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_43",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 43
+    },
+    {
+      "file_id": "evidence_44",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_no_matching_facts",
+      "fact_count": 0
+    },
+    {
+      "file_id": "evidence_45",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 72
+    },
+    {
+      "file_id": "evidence_46",
+      "format": "image",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_47",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 45
+    },
+    {
+      "file_id": "evidence_48",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_no_matching_facts",
+      "fact_count": 0
+    },
+    {
+      "file_id": "evidence_49",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 32
+    },
+    {
+      "file_id": "evidence_50",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 20
+    },
+    {
+      "file_id": "evidence_51",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 4
+    },
+    {
+      "file_id": "evidence_52",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 16
+    },
+    {
+      "file_id": "evidence_53",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_no_matching_facts",
+      "fact_count": 0
+    },
+    {
+      "file_id": "evidence_54",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_55",
+      "format": "pdf",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_56",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_57",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_58",
+      "format": "pdf",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_59",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 2
+    },
+    {
+      "file_id": "evidence_60",
+      "format": "image",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 1
+    },
+    {
+      "file_id": "evidence_61",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_no_matching_facts",
+      "fact_count": 0
+    },
+    {
+      "file_id": "evidence_62",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 24
+    },
+    {
+      "file_id": "evidence_63",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 14
+    },
+    {
+      "file_id": "evidence_64",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 11
+    },
+    {
+      "file_id": "evidence_65",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 20
+    },
+    {
+      "file_id": "evidence_66",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 21
+    },
+    {
+      "file_id": "evidence_67",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_no_matching_facts",
+      "fact_count": 0
+    },
+    {
+      "file_id": "evidence_68",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 18
+    },
+    {
+      "file_id": "evidence_69",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 16
+    },
+    {
+      "file_id": "evidence_70",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 8
+    },
+    {
+      "file_id": "evidence_71",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 20
+    },
+    {
+      "file_id": "evidence_72",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 19
+    },
+    {
+      "file_id": "evidence_73",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 10
+    },
+    {
+      "file_id": "evidence_74",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 17
+    },
+    {
+      "file_id": "evidence_75",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 20
+    },
+    {
+      "file_id": "evidence_76",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 9
+    },
+    {
+      "file_id": "evidence_77",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 21
+    },
+    {
+      "file_id": "evidence_78",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 17
+    },
+    {
+      "file_id": "evidence_79",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 12
+    },
+    {
+      "file_id": "evidence_80",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 18
+    },
+    {
+      "file_id": "evidence_81",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 20
+    },
+    {
+      "file_id": "evidence_82",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 11
+    },
+    {
+      "file_id": "evidence_83",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 24
+    },
+    {
+      "file_id": "evidence_84",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 24
+    },
+    {
+      "file_id": "evidence_85",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 8
+    },
+    {
+      "file_id": "evidence_86",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 18
+    },
+    {
+      "file_id": "evidence_87",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 17
+    },
+    {
+      "file_id": "evidence_88",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 10
+    },
+    {
+      "file_id": "evidence_89",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 21
+    },
+    {
+      "file_id": "evidence_90",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_no_matching_facts",
+      "fact_count": 0
+    },
+    {
+      "file_id": "evidence_91",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 5
+    },
+    {
+      "file_id": "evidence_92",
+      "format": "json",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 26
+    },
+    {
+      "file_id": "evidence_93",
+      "format": "sql",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 16
+    },
+    {
+      "file_id": "evidence_94",
+      "format": "log",
+      "exists": true,
+      "coverage_state": "parsed_with_facts",
+      "fact_count": 12
+    }
+  ],
+  "privacy_note": "No evidence text, identifiers, or raw values are written here."
+}

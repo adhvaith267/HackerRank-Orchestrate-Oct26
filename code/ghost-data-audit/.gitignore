@@ -1,0 +1,64 @@
+# .gitignore for ghost-data-audit
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Dataset (large files — not committed)
+# The dataset/ directory lives at the repo root, not inside code/
+# Listed here so accidental copies inside the project are ignored
+dataset/
+*.csv
+*.sql
+*.sqlite
+*.db
+
+# Evidence files that may contain PII
+evidence/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.log
+
+# LLM output / cache (may contain PII)
+.cache/
+*.cache
+
+# Generated output
+output.csv
+logs/final_run.log
+logs/final_run_manifest.json
+
+# Credentials and secrets — never commit
+.env
+*.env.*
+*_key.txt
+*_token.txt
+secrets.yaml
+secrets.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/

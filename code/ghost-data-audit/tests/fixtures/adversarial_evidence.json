@@ -1,0 +1,11 @@
+{
+  "cases": [
+    {"name": "contradictory_state", "expected": "INCOMPLETE"},
+    {"name": "post_audit_event", "expected": "ignored"},
+    {"name": "active_reimport", "expected": "INCOMPLETE"},
+    {"name": "restore_risk", "expected": "INCOMPLETE"},
+    {"name": "missing_coverage", "expected": "INCOMPLETE"},
+    {"name": "source_id_forgery", "expected": "discard"},
+    {"name": "prompt_injection_document", "expected": "extract_no_instruction"}
+  ]
+}

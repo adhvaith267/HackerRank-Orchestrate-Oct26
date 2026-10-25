@@ -1,0 +1,19 @@
+# requirements.txt — Python dependencies for ghost-data-audit
+# Pin exact versions to ensure reproducibility.
+
+# Core data validation
+pydantic==2.7.4
+
+# YAML configuration
+PyYAML==6.0.1
+
+# Testing
+pytest==8.2.2
+pytest-cov==5.0.0
+
+# PDF text extraction (runtime: requires poppler-utils system package)
+# Install: sudo apt-get install -y poppler-utils  (pdftotext CLI)
+# No additional Python package required; subprocess call to pdftotext.
+
+# Optional: rich terminal output for CLI progress
+# rich==13.7.1

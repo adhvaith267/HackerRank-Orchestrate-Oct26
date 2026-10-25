@@ -1,0 +1,72 @@
+[
+  {
+    "case_id": "custom_A_historical_alias_sync",
+    "user_id": "user_alias_01",
+    "audit_at": "2026-10-01T00:00:00Z",
+    "request_authorized": true,
+    "rationale": "Historical email resolution is represented by the stable user_id; a secondary search copy remains and an active sync can recreate it.",
+    "resources": [
+      {"system_id": "account_service", "resource_id": "account_alias_01", "data_category": "USER_PROFILE", "required_action": "DELETE", "state": "ABSENT_CONFIRMED", "evidence_id": "custom_A_account", "compliant": true},
+      {"system_id": "search_service", "resource_id": "search_alias_01", "data_category": "SEARCH_INDEX_ENTRY", "required_action": "DELETE", "state": "PRESENT", "evidence_id": "custom_A_search"},
+      {"system_id": "security_service", "resource_id": "audit_alias_01", "data_category": "SECURITY_AUDIT_LOG", "required_action": "RETAIN", "state": "PRESENT", "evidence_id": "custom_A_audit", "compliant": true}
+    ],
+    "violations": [
+      {"rule_id": "custom_rule_delete", "data_category": "SEARCH_INDEX_ENTRY", "required_action": "DELETE", "system_id": "search_service", "resource_id": "search_alias_01", "observed_state": "PRESENT", "required_final_state": "ABSENT_CONFIRMED", "evidence_id": "custom_A_search"}
+    ],
+    "flows": [
+      {"resource_id": "data_flow_alias_01", "status": "ACTIVE", "evidence_id": "custom_A_flow", "destination_system": "search_service"}
+    ],
+    "expected": {
+      "deletion_status": "INCOMPLETE",
+      "steps": [
+        {"step_no": 1, "phase": "FINDING", "system_id": "search_service", "resource_id": "search_alias_01", "operation": "REPORT_REMAINING_RECORD", "state": "PRESENT", "evidence_id": "custom_A_search"},
+        {"step_no": 2, "phase": "FINDING", "system_id": "integration_service", "resource_id": "data_flow_alias_01", "operation": "REPORT_ACTIVE_DATA_FLOW", "state": "ACTIVE", "evidence_id": "custom_A_flow"},
+        {"step_no": 3, "phase": "REMEDIATION", "system_id": "integration_service", "resource_id": "data_flow_alias_01", "operation": "DISABLE_DATA_FLOW", "state": "DISABLED", "evidence_id": ""},
+        {"step_no": 4, "phase": "REMEDIATION", "system_id": "search_service", "resource_id": "search_alias_01", "operation": "DELETE_RECORD", "state": "ABSENT", "evidence_id": ""},
+        {"step_no": 5, "phase": "VERIFICATION", "system_id": "account_service", "resource_id": "account_alias_01", "operation": "VERIFY_RECORD_ABSENT", "state": "ABSENT", "evidence_id": ""},
+        {"step_no": 6, "phase": "VERIFICATION", "system_id": "search_service", "resource_id": "search_alias_01", "operation": "VERIFY_RECORD_ABSENT", "state": "ABSENT", "evidence_id": ""},
+        {"step_no": 7, "phase": "VERIFICATION", "system_id": "security_service", "resource_id": "audit_alias_01", "operation": "VERIFY_RECORD_PRESENT", "state": "PRESENT", "evidence_id": ""},
+        {"step_no": 8, "phase": "VERIFICATION", "system_id": "integration_service", "resource_id": "data_flow_alias_01", "operation": "VERIFY_DATA_FLOW_DISABLED", "state": "DISABLED", "evidence_id": ""}
+      ]
+    }
+  },
+  {
+    "case_id": "custom_B_tombstone_redaction",
+    "user_id": "user_tomb_01",
+    "audit_at": "2026-10-01T00:00:00Z",
+    "request_authorized": true,
+    "rationale": "The account tombstone is retained by policy but still exposes direct identifiers including an email hash.",
+    "resources": [
+      {"system_id": "account_service", "resource_id": "account_tomb_01", "data_category": "USER_PROFILE", "required_action": "DELETE", "state": "ABSENT_CONFIRMED", "evidence_id": "custom_B_account", "compliant": true},
+      {"system_id": "security_service", "resource_id": "audit_tomb_01", "data_category": "SECURITY_AUDIT_LOG", "required_action": "RETAIN", "state": "PRESENT", "evidence_id": "custom_B_audit", "compliant": true},
+      {"system_id": "identity_service", "resource_id": "tombstone_01", "data_category": "ACCOUNT_TOMBSTONE", "required_action": "REDACT", "state": "PRESENT", "evidence_id": "custom_B_tombstone"}
+    ],
+    "violations": [
+      {"rule_id": "custom_rule_tombstone", "data_category": "ACCOUNT_TOMBSTONE", "required_action": "REDACT", "system_id": "identity_service", "resource_id": "tombstone_01", "observed_state": "PRESENT", "required_final_state": "REDACTED_CONFIRMED", "evidence_id": "custom_B_tombstone"}
+    ],
+    "expected": {
+      "deletion_status": "INCOMPLETE",
+      "steps": [
+        {"step_no": 1, "phase": "FINDING", "system_id": "identity_service", "resource_id": "tombstone_01", "operation": "REPORT_EXPOSED_PII", "state": "PRESENT", "evidence_id": "custom_B_tombstone"},
+        {"step_no": 2, "phase": "REMEDIATION", "system_id": "identity_service", "resource_id": "tombstone_01", "operation": "REDACT_RECORD", "state": "REDACTED", "evidence_id": ""},
+        {"step_no": 3, "phase": "VERIFICATION", "system_id": "account_service", "resource_id": "account_tomb_01", "operation": "VERIFY_RECORD_ABSENT", "state": "ABSENT", "evidence_id": ""},
+        {"step_no": 4, "phase": "VERIFICATION", "system_id": "security_service", "resource_id": "audit_tomb_01", "operation": "VERIFY_RECORD_PRESENT", "state": "PRESENT", "evidence_id": ""},
+        {"step_no": 5, "phase": "VERIFICATION", "system_id": "identity_service", "resource_id": "tombstone_01", "operation": "VERIFY_RECORD_REDACTED", "state": "REDACTED", "evidence_id": ""}
+      ]
+    }
+  },
+  {
+    "case_id": "custom_C_not_deletion",
+    "user_id": "user_na_01",
+    "audit_at": "2026-10-01T00:00:00Z",
+    "request_authorized": false,
+    "rationale": "The request is an access request; unrelated deletion-looking evidence cannot authorize deletion.",
+    "resources": [
+      {"system_id": "account_service", "resource_id": "account_na_01", "data_category": "USER_PROFILE", "required_action": "DELETE", "state": "PRESENT", "evidence_id": "custom_C_unrelated"}
+    ],
+    "violations": [
+      {"rule_id": "custom_rule_delete", "data_category": "USER_PROFILE", "required_action": "DELETE", "system_id": "account_service", "resource_id": "account_na_01", "observed_state": "PRESENT", "required_final_state": "ABSENT_CONFIRMED", "evidence_id": "custom_C_unrelated"}
+    ],
+    "expected": {"deletion_status": "NOT_APPLICABLE", "steps": []}
+  }
+]

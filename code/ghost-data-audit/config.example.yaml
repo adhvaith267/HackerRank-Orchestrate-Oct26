@@ -1,0 +1,62 @@
+# config.example.yaml — Example configuration for ghost-data-audit
+# Copy to config.yaml and adjust paths before running.
+# No secret values are used. Ollama runs locally and needs no API key.
+
+dataset:
+  # Absolute or relative path to the dataset/ directory.
+  # Defaults to <repo_root>/dataset if not set.
+  # root: /path/to/hackerrank-orchestrate-october26/dataset
+  # evidence_dir: /path/to/hackerrank-orchestrate-october26/dataset/evidence
+
+output:
+  # Where to write the final output.csv
+  # output_csv: /path/to/hackerrank-orchestrate-october26/output.csv
+  # cache_dir: .cache
+  # log_path: logs/final_run.log
+  # manifest_path: logs/final_run_manifest.json
+
+llm:
+  # Mode: 'off' (reproducible final benchmark default), 'auto' (ambiguous
+  # unstructured evidence only), 'on' (all eligible unstructured evidence)
+  mode: "off"
+
+  # Provider: local Ollama only; hosted model APIs are forbidden
+  provider: ollama
+
+  # Ollama endpoint and models
+  ollama_base_url: http://localhost:11434
+  ollama_model: qwen2.5:7b
+  # Optional local override after memory testing, e.g. qwen3:8b
+  # ollama_model_override: qwen3:8b
+  ollama_vision_model: llava
+
+  # Maximum characters of evidence text per LLM call
+  max_evidence_chars: 6000
+
+  # Request timeout in seconds
+  request_timeout_seconds: 30
+
+  # Retry settings
+  max_retries: 2
+  retry_backoff_base_seconds: 0.5
+  ollama_num_ctx: 4096
+
+  # LLM temperature (0.0 = deterministic)
+  temperature: 0.0
+
+  # Enable LLM vision for .png image evidence files
+  enable_ocr: true
+
+  # Send PDF text to LLM after pdftotext extraction
+  enable_pdf_llm: false
+
+# Number of concurrent worker threads for case processing
+max_workers: 4
+
+# Process only the first N cases (leave null for all 518)
+case_limit: null
+
+# Use sample_deletion_requests.csv instead of deletion_requests.csv
+sample_only: false
+
+verbose: false
